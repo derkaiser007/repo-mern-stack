@@ -1,0 +1,22 @@
+npm init -y
+
+Inside package.json, add:
+"type": "module",
+It'll allow import and export keyword.
+
+npm i express nodemon
+nodemon is used for re-starting server automatically.
+
+Inside "scripts" of package.json, add:
+"start": "node index.js",
+"dev": "nodemon index.js"
+
+node -v
+
+npm i mongoose
+
+npm i cors
+
+Frontend:
+npm i axios 
+npm i react-icons
