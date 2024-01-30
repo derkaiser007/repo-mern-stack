@@ -39,7 +39,7 @@ export default function UpdateInfo() {
           .put(`http://localhost:5555/info/${id}`, data)
           .then(() => {
             setLoading(false);
-            navigate('/info');
+            navigate('/');
           })
           .catch((error) => {
             setLoading(false);

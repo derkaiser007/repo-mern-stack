@@ -29,7 +29,7 @@ export default function DeleteInfo() {
       .delete(`http://localhost:5555/info/${id}`)
       .then(() => {
         setLoading(false);
-        navigate('/info');
+        navigate('/');
       })
       .catch((error) => {
         setLoading(false);

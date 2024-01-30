@@ -22,7 +22,7 @@ export default function CreateInfo() {
             .post('http://localhost:5555/info', data)
             .then(() => {
               setLoading(false);
-              navigate('/info');
+              navigate('/');
             })
             .catch((error) => {
               setLoading(false);
