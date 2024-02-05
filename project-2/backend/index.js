@@ -1,8 +1,9 @@
 import express from 'express';
-import { PORT, mongoDBURL } from './config.js';
 import mongoose from 'mongoose';
-import infoRoute from './routes/infoRoute.js'
 import cors from 'cors';
+import { PORT, mongoDBURL } from './config.js';
+import infoRoute from './routes/infoRoute.js'
+
 
 const app = express();
 
