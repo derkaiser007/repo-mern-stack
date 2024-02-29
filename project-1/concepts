@@ -1,0 +1,29 @@
+project-1:
+
+1)
+npm init
+package name: (repo-mern-stack) ecommerce
+entry point: (index.js) backend/server.js
+
+2)
+npm i express mongoose dotenv nodemon
+
+3)package.json/scripts, add:
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+
+4)package.json, add:
+"type": "module",
+It'll allow import and export keyword.
+
+5) 
+npm i bcryptjs jsonwebtoken validator nodemailer cookie-parser body-parser
+
+
+frontend:
+
+1)
+npm i axios react-helmet @reduxjs/toolkit react-redux redux redux-thunk react-router-dom overlay-navbar webfontloader react-icons react-rating-stars-component
+
+2)
+npm i react-alert react-alert-template-basic redux-devtools-extension 
