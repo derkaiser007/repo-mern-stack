@@ -6,16 +6,16 @@ import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 
 export default function Table({ info }) {
     return(
-        <>
-        <table className='mt-5 ml-5 border-separate border border-slate-400'>
+        <div>
+        <table className='m-4'>
             <thead>
             <tr>
-                <th className='border border-slate-300 rounded'>No</th>
-                <th className='border border-slate-300 rounded'>Name</th>
-                <th className='border border-slate-300 rounded'>Gender</th>
-                <th className='border border-slate-300 rounded'>Age</th>
-                <th className='border border-slate-300 rounded'>Country</th>
-                <th className='border border-slate-300 rounded'>Action</th>
+                <th className='border-2 border-black px-4 mr-2'>No</th>
+                <th className='border-2 border-black px-4 m-2'>Name</th>
+                <th className='border-2 border-black px-4 m-2'>Gender</th>
+                <th className='border-2 border-black px-4 m-2'>Age</th>
+                <th className='border-2 border-black px-4 m-2'>Country</th>
+                <th className='border-2 border-black px-4 ml-2'>Action</th>
             </tr>
             </thead>
             <tbody>
@@ -23,20 +23,20 @@ export default function Table({ info }) {
                 {console.log(info)}
                 return (
                     <tr key={info._id}>
-                      <td className='border border-slate-300 rounded'>{index + 1}</td>
-                      <td className='border border-slate-300 rounded'>{info.name}</td>
-                      <td className='border border-slate-300 rounded'>{info.gender}</td>
-                      <td className='border border-slate-300 rounded'>{info.age}</td>
-                      <td className='border border-slate-300 rounded'>{info.country}</td>
-                      <td>
-                        <div className='border border-slate-300 rounded flex flex-row h-9 items-center'>
-                            <Link to={`/info/details/${info._id}`}>
+                      <td className='border-2 border-black px-4 mr-2'>{index + 1}</td>
+                      <td className='border-2 border-black px-4 m-2'>{info.name}</td>
+                      <td className='border-2 border-black px-4 m-2'>{info.gender}</td>
+                      <td className='border-2 border-black px-4 m-2'>{info.age}</td>
+                      <td className='border-2 border-black px-4 m-2'>{info.country}</td>
+                      <td className='border-2 border-black px-4 ml-2'>
+                        <div className='flex flex-row'>
+                            <Link to={`/info/details/${info._id}`} className='mr-1'>
                                 <BsInfoCircle />
                             </Link>
-                            <Link to={`/info/edit/${info._id}`}>
+                            <Link to={`/info/edit/${info._id}`} className='mx-1'>
                                 <AiOutlineEdit />
                             </Link>
-                            <Link to={`/info/delete/${info._id}`}>
+                            <Link to={`/info/delete/${info._id}`} className='ml-1'>
                                 <MdOutlineDelete />
                             </Link>
                         </div>
@@ -46,11 +46,11 @@ export default function Table({ info }) {
             })}
             </tbody>
         </table>
-        <div className='mt-5 ml-5'>
-        <Link to='/info/create'>
-            <MdOutlineAddBox />
+        <div>
+        <Link to='/info/create' className='border-2 border-black m-4 p-2'>
+            Add New Data
         </Link>
         </div>
-        </>
+        </div>
     )
 }

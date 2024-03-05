@@ -7,17 +7,17 @@ import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 export default function Card({ info }) {
     return(
         <>
-        <div className='mt-5 ml-5 flex flex-row gap-3'>
+        <div className='flex flex-row m-2'>
         {info && info.map((info, index) => {
                 {console.log(info)}
                 return (
-                    <div key={info._id} className='w-60 h-100 border-separate border border-slate-400 rounded'>
+                    <div key={info._id} className='border-2 border-transparent shadow-md shadow-black m-2 p-2 w-40 h-40'>
                         <div>No: {index + 1}</div>
                         <div>Name: {info.name}</div>
                         <div>Gender: {info.gender}</div>
                         <div>Age: {info.age}</div>
                         <div>Country: {info.country}</div>
-                        <div className='border border-slate-300 rounded flex flex-row h-9 items-center justify-center'>
+                        <div className='flex flex-row gap-2'>
                             <Link to={`/info/details/${info._id}`}>
                                 <BsInfoCircle />
                             </Link>
@@ -32,9 +32,9 @@ export default function Card({ info }) {
                 );
             })}
         </div>
-        <div className='mt-5 ml-5'>
-            <Link to='/info/create'>
-                <MdOutlineAddBox />
+        <div>
+            <Link to='/info/create' className='border-2 border-black m-4 p-2'>
+                Add New Data
             </Link>
         </div>
         </>
