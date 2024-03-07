@@ -11,8 +11,8 @@ import product from './routes/productRoute.js'
 import user from './routes/userRoute.js'
 import order from './routes/orderRoute.js'
 
-app.use('/api/product', product)
-app.use('/api/user', user)
+app.use('/api', product)
+app.use('/api', user)
 app.use('/api', order)
 
 
