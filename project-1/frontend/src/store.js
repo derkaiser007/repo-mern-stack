@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import thunk from "redux-thunk";
+import { thunk } from "redux-thunk";
 import { configureStore } from '@reduxjs/toolkit';
 
 import {
@@ -32,23 +32,26 @@ import {
 
 const reducer = combineReducers({
   products: productsReducer,
+  newProduct: newProductReducer,
+  product: productReducer,
   productDetails: productDetailsReducer,
+  newReview: newReviewReducer,
+  productReviews: productReviewsReducer,
+  review: reviewReducer,
+
   user: userReducer,
   profile: profileReducer,
   forgotPassword: forgotPasswordReducer,
-  cart: cartReducer,
-  newOrder: newOrderReducer,
-  myOrders: myOrdersReducer,
-  orderDetails: orderDetailsReducer,
-  newReview: newReviewReducer,
-  newProduct: newProductReducer,
-  product: productReducer,
-  allOrders: allOrdersReducer,
-  order: orderReducer,
   allUsers: allUsersReducer,
   userDetails: userDetailsReducer,
-  productReviews: productReviewsReducer,
-  review: reviewReducer,
+
+  cart: cartReducer,
+
+  newOrder: newOrderReducer,
+  myOrders: myOrdersReducer,
+  allOrders: allOrdersReducer,
+  order: orderReducer,
+  orderDetails: orderDetailsReducer,
 });
 
 let initialState = {
@@ -62,7 +65,7 @@ let initialState = {
   },
 };
 
-const middleware = [thunk];
+const middleware = (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk);
 
 const store = configureStore({
     reducer,

@@ -150,7 +150,7 @@ export const deleteProduct = (id) => async (dispatch) => {
   }
 };
 
-// Get Products Details
+// Get Product Details
 export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
@@ -169,7 +169,7 @@ export const getProductDetails = (id) => async (dispatch) => {
   }
 };
 
-// NEW REVIEW
+// New Review
 export const newReview = (reviewData) => async (dispatch) => {
   try {
     dispatch({ type: NEW_REVIEW_REQUEST });

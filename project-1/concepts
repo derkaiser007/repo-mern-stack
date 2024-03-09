@@ -24,6 +24,10 @@ frontend:
 
 1)
 npm i axios react-helmet @reduxjs/toolkit react-redux redux redux-thunk react-router-dom overlay-navbar webfontloader react-icons react-rating-stars-component
+npm i react-alert --force
 
 2)
 npm i react-alert react-alert-template-basic redux-devtools-extension 
+
+3)In package.json:
+"proxy": "http://192.168.29.21:4000"
