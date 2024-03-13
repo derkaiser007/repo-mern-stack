@@ -33,3 +33,6 @@ npm i react-alert react-alert-template-basic redux-devtools-extension
 
 npm config set proxy http://192.168.29.21:4000
 npm config set https-proxy http://192.168.29.21:4000
+
+npm config rm proxy
+npm config rm https-proxy
